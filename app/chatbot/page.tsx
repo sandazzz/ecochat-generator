@@ -25,7 +25,7 @@ const useTimedState = (state: unknown, delay = 2000) => {
 };
 
 export default function Chatbot() {
-  const [htmlCode, setHtmlCode] = useState("");
+  /*const [htmlCode, setHtmlCode] = useState("");
   const timedHtmlCode = useTimedState(htmlCode, 1000)
   const [loading, setLoading] = useState(false);
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -65,9 +65,9 @@ export default function Chatbot() {
       await chunk;
     };
     await readChunk;
-  };
+  };*/
   return (
-    <main className="h-full relative">
+    /*<main className="h-full relative">
       {loading ? (
         <div className="absolute top-4 left-0 right-0 flex items-center justify-center">
           <progress className="progress w-56" />
@@ -115,6 +115,7 @@ export default function Chatbot() {
           </fieldset>
         </form>
       </div>
-    </main>
+    </main>*/
+    <div></div>
   );
 }
