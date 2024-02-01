@@ -1,4 +1,4 @@
-/*import { openai } from "@/src/lib/openai";
+import { openai } from "@/src/lib/openai";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 
 const systemPrompt = `
@@ -48,4 +48,3 @@ export const POST = async (req: Request) => {
   const stream = OpenAIStream(response);
   return new StreamingTextResponse(stream);
 };
-*/
