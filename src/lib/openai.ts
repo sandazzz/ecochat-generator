@@ -1,4 +1,4 @@
-import OpenAI from "openai";
+/*import OpenAI from "openai";
 
 // Create an OpenAI API client (that's edge friendly!)
 const openAIKey = process.env.OPEN_AI_KEY;
@@ -10,3 +10,4 @@ if (!openAIKey) {
 export const openai = new OpenAI({
   apiKey: openAIKey,
 });
+*/
