@@ -29,41 +29,31 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="h-screen">
+    <main className="h-screen w-full">
       <ParticlesBackground />
-      <section className="absolute w-full h-screen flex flex-col md:flex-row justify-center items-center gap-8 ">
-        <div className="animate-fade-right animate-ease-in-out">
-          <div className="w-[592px] h-96 p-4 bg-white rounded-2xl shadow-2xl shadow-blue-500/20 text-[#0c192c]">
-            <h1 className="text-xl font-bold">Welcome !</h1>
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              eum nemo doloribus repudiandae ab sapiente quo qui magnam? Est
-              tenetur deleniti assumenda dolor sit laudantium? Atque ad magni
-              quaerat a!
-            </p>
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              eum nemo doloribus repudiandae ab sapiente quo qui magnam? Est
-              tenetur deleniti assumenda dolor sit laudantium? Atque ad magni
-              quaerat a!
-            </p>
-            <br />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              eum nemo doloribus repudiandae ab sapiente quo qui magnam? Est
-              tenetur deleniti assumenda dolor sit laudantium? Atque ad magni
-              quaerat a!
-            </p>
-          </div>
+      <section className="absolute top-32 
+        w-full h-screen md:h-3/4
+        flex flex-col md:flex-row justify-center items-center gap-8">
+        <div className="w-80 h-96 p-4 bg-white rounded-2xl shadow-2xl shadow-blue-500/20 text-[#0c192c] animate-fade-right animate-ease-in-out">
+          <h1 className="text-xl font-bold">Welcome !</h1>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eum
+            nemo doloribus repudiandae ab sapiente quo qui magnam? Est tenetur
+            deleniti assumenda dolor sit laudantium? Atque ad magni quaerat a!
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eum
+            nemo doloribus repudiandae ab sapiente quo qui magnam?
+          </p>
         </div>
-        <div className="flex gap-4 text-white">
+        <div className="flex flex-col md:flex-row gap-4 text-white">
           <div
             className="
             cardLeft
                 flex flex-col items-center
-                w-72 h-96 
+                w-72 h-64 md:h-96
                 bg-white bg-opacity-10 
                 border-t-2 border-l-2 
                 border-solid border-white border-opacity-50 rounded-2xl"
@@ -76,11 +66,10 @@ export default function Home() {
               Chatbot
             </Link>
           </div>
-
           <div
             className="
                 cardRight
-                w-72 h-96
+                w-72 h-64 md:h-96
                 bg-white bg-opacity-10 
                 border-t-2 border-r-2 
                 border-solid border-white border-opacity-50 rounded-2xl"
