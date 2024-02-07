@@ -22,20 +22,24 @@ const useTimedState = (state: unknown, delay = 2000) => {
 
     return () => clearTimeout(timeout);
   }, [state, delay]);
+
+  return timedState;
 };
 
-export default function Chatbot() {
-  /*const [htmlCode, setHtmlCode] = useState("");
-  const timedHtmlCode = useTimedState(htmlCode, 1000)
+export default function Home() {
+  const [htmlCode, setHtmlCode] = useState("");
+  const timedHtmlCode = useTimedState(htmlCode, 4000);
   const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (loading) return;
-
     const formData = new FormData(event.currentTarget);
 
     const prompt = formData.get("prompt") as string;
+
     setLoading(true);
+    setHtmlCode("");
 
     const result = await fetch("api/tailwind", {
       method: "POST",
@@ -51,71 +55,74 @@ export default function Chatbot() {
 
     const reader = body.getReader();
 
-    const readChunk = async () => {
+    const readChunck = async () => {
       const { done, value } = await reader.read();
 
-      if (!done) {
+      if (done) {
         setLoading(false);
-        setHtmlCode("");
         return;
       }
-
-      const chunk = new TextDecoder().decode(value);
-      setHtmlCode((prev) => prev + chunk);
-      await chunk;
+      const chunck = new TextDecoder().decode(value);
+      setHtmlCode((prev) => prev + chunck);
+      await readChunck();
     };
-    await readChunk;
-  };*/
+    await readChunck();
+  };
+
   return (
-    /*<main className="h-full relative">
+    <main className="h-full relative">
       {loading ? (
-        <div className="absolute top-4 left-0 right-0 flex items-center justify-center">
-          <progress className="progress w-56" />
+        <div className="absolute top-36 left-0 right-0 flex items-center justify-center">
+          <progress className="progress progress-accent w-56"></progress>
         </div>
       ) : null}
 
-      <pre>{htmlCode}</pre>
       {htmlCode ? (
-        <iframe
-          className="h-full w-full"
-          srcDoc={`<!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Code - pen TailwindCSS</title>
-          <script src ="https://cdn.tailwindcss.com"></script>
-          <style>
-          body {
-            padding : 8px
+        <div className="relative h-full left-0 right-0 top-36 flex items-center justify-center">
+          <iframe
+            className="w-full h-full"
+            srcDoc={`<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Code - pen TailwindCSS</title>
+            <script src ="https://cdn.tailwindcss.com"></script>
+
+        </head>
+        <style>
+          body{
+            background-color : #0c192c
           }
-          </style>
-      </head>
-      <body>
-          ${htmlCode}
-      </body>
-      </html>`}
-        />
+        </style>
+        <body>
+            ${timedHtmlCode}
+        </body>
+        </html>`}
+          />
+        </div>
       ) : null}
 
+      <div className="fixed bottom-4 left-0 right-0 flex items-center justify-center">
+        <div className="p-4 bg-base-200 max-w-lg w-full rounded-lg shadow-xl">
+          <div
+            className="max-w-full overflow-auto flex flex-col gap-1"
+            style={{ maxHeight: 150 }}
+          ></div>
 
-      <div className="fixed bottom-4 right-0 left-0 flex items-center justify-center">
-        <form
-          className="p-4 bg-base-200 max-w-lg w-full rounded-lg shadow-xl"
-          onSubmit={handleSubmit}
-        >
-          <fieldset className="flex gap-4 items-start">
-            <textarea
-              name="prompt"
-              className="textarea textarea-primary w-full"
-            />
-            <button className="btn btn-primary btn-sm" type="submit">
-              <Sparkles size={20} />
-            </button>
-          </fieldset>
-        </form>
+          <form onSubmit={handleSubmit}>
+            <fieldset className="flex gap-4 items-start">
+              <textarea
+                name="prompt"
+                className="w-full textarea textarea-primary"
+              />
+              <button className="btn btn-primary" type="submit">
+                <Sparkles size={20} />
+              </button>
+            </fieldset>
+          </form>
+        </div>
       </div>
-    </main>*/
-    <div></div>
+    </main>
   );
 }

@@ -31,10 +31,25 @@ export default function Home() {
   return (
     <main className="h-screen">
       <ParticlesBackground />
-      <section className="absolute w-full h-screen flex flex-row justify-center items-center gap-8 ">
+      <section className="absolute w-full h-screen flex flex-col md:flex-row justify-center items-center gap-8 ">
         <div className="animate-fade-right animate-ease-in-out">
-          <div className="w-[592px] h-[400px] p-4 bg-white rounded-2xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] text-[#0c192c]">
+          <div className="w-[592px] h-96 p-4 bg-white rounded-2xl shadow-2xl shadow-blue-500/20 text-[#0c192c]">
             <h1 className="text-xl font-bold">Welcome !</h1>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eum nemo doloribus repudiandae ab sapiente quo qui magnam? Est
+              tenetur deleniti assumenda dolor sit laudantium? Atque ad magni
+              quaerat a!
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              eum nemo doloribus repudiandae ab sapiente quo qui magnam? Est
+              tenetur deleniti assumenda dolor sit laudantium? Atque ad magni
+              quaerat a!
+            </p>
+            <br />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
               eum nemo doloribus repudiandae ab sapiente quo qui magnam? Est
@@ -48,7 +63,7 @@ export default function Home() {
             className="
             cardLeft
                 flex flex-col items-center
-                w-[280px] h-[400px] 
+                w-72 h-96 
                 bg-white bg-opacity-10 
                 border-t-2 border-l-2 
                 border-solid border-white border-opacity-50 rounded-2xl"
@@ -65,7 +80,7 @@ export default function Home() {
           <div
             className="
                 cardRight
-                w-[280px] h-[400px] 
+                w-72 h-96
                 bg-white bg-opacity-10 
                 border-t-2 border-r-2 
                 border-solid border-white border-opacity-50 rounded-2xl"
