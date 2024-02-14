@@ -6,13 +6,46 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model ScientificArticles {
-  id      Int     @id @default(autoincrement())
-  title   String
-  content String?
-  author  String
+model Article {
+  id          Int      @id @default(autoincrement())
+  title       String
+  author      String
+  publishedAt DateTime
+
+  sections Section[]
+}
+
+model Section {
+  id    Int    @id @default(autoincrement())
+  title String
+  order Int
+
+  articleId Int
+  article   Article @relation(fields: [articleId], references: [id])
+
+  paragraphes Paragraph[]
+}
+
+model Paragraph {
+  id      Int    @id @default(autoincrement())
+  Contenu String
+
+  sectionId Int
+  section   Section @relation(fields: [sectionId], references: [id])
+
+  image Image?
+}
+
+model Image {
+  id          Int    @id @default(autoincrement())
+  URL_image   String
+  Description String
+
+  paragraphId Int       @unique
+  paragraph   Paragraph @relation(fields: [paragraphId], references: [id])
 }

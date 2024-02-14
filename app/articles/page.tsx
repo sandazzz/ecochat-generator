@@ -9,7 +9,7 @@ export default function Articles() {
         absolute top-36 left-0 right-0
         flex flex-col md:flex-row gap-7 md:flex-wrap items-center justify-center"
         >
-          <div className="card card-compact w-96 h-[348px] bg-primary-content shadow-xl">
+          <div className="card card-compact w-96 h-[348px] bg-base-100 shadow-xl">
             <figure>
               <Image
                 width={384}
