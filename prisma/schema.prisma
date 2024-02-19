@@ -12,10 +12,13 @@ datasource db {
 }
 
 model Article {
-  id          Int      @id @default(autoincrement())
-  title       String
-  author      String
-  publishedAt DateTime
+  id           Int      @id @default(autoincrement())
+  title        String
+  author       String
+  publishedAt  DateTime
+  illustration String
+  description  String?
+  introduction String?
 
   sections Section[]
 }
@@ -33,7 +36,7 @@ model Section {
 
 model Paragraph {
   id      Int    @id @default(autoincrement())
-  Contenu String
+  content String
 
   sectionId Int
   section   Section @relation(fields: [sectionId], references: [id])
@@ -43,8 +46,8 @@ model Paragraph {
 
 model Image {
   id          Int    @id @default(autoincrement())
-  URL_image   String
-  Description String
+  url_image   String
+  description String
 
   paragraphId Int       @unique
   paragraph   Paragraph @relation(fields: [paragraphId], references: [id])

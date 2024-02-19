@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import ParticlesBackground from "./ui/particlesBackground";
+import ParticlesBackground from "@/app/ui/particlesBackground";
 import { Layers, Bot } from "lucide-react";
 import VanillaTilt from "vanilla-tilt";
 
