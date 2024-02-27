@@ -7,7 +7,7 @@ export default async function Articles() {
   return (
     <>
       <main className="h-full relative">
-        <div className="relative top-36 mx-auto max-w-6xl ">
+        <div className="relative top-36 mx-auto max-w-6xl flex flex-col gap-5">
           {articles.map((article: any) => (
             <Article key={article.id} article={article}></Article>
           ))}

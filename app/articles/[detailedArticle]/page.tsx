@@ -21,8 +21,7 @@ export default async function detailedArticles({
             <h1>{article.title}</h1>
             <p>Auteur: {article.author}</p>
             <p>
-              Date de publication:
-              {new Date(article.publishedAt).toLocaleDateString()}
+              Date de publication: {new Date(article.publishedAt).toLocaleDateString()}
             </p>
             <p>Description: {article.description}</p>
           </div>
@@ -39,7 +38,7 @@ export default async function detailedArticles({
         <div id="content" className="flex flex-col gap-6">
           {article.sections.map((section: any) => (
             <div key={section.order} className="flex flex-col gap-3">
-              <h2>{section.title}</h2>
+              <h2>{section.title} :</h2>
               <ul>
                 {section.paragraphes.map((paragraphe: any) => (
                   <li key={paragraphe.id}>{paragraphe.content}</li>
