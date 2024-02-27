@@ -7,16 +7,10 @@ export default async function Articles() {
   return (
     <>
       <main className="h-full relative">
-        <div
-          className="
-          absolute top-36 left-0 right-0
-          flex flex-col md:flex-row gap-7 md:flex-wrap items-center justify-center"
-        >
-          {articles.map(
-            (article: any) => (
-             <Article key={article.id} article={article}></Article>
-            )
-          )}
+        <div className="relative top-36 mx-auto max-w-6xl ">
+          {articles.map((article: any) => (
+            <Article key={article.id} article={article}></Article>
+          ))}
         </div>
       </main>
     </>
