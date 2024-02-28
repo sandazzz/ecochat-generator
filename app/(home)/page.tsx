@@ -60,7 +60,7 @@ export default function Home() {
           >
             <Link
               className="relative top-10 flex flex-col items-center"
-              href="/chatbot"
+              href="/chat"
             >
               <Bot size={180} />
               Chatbot

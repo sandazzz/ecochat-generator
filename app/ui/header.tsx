@@ -28,7 +28,7 @@ export default function Header() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/chatbot">Chatbot</Link>
+            <Link href="/chat">Chatbot</Link>
           </li>
           <li>
             <Link href="/articles">Articles</Link>
@@ -37,7 +37,7 @@ export default function Header() {
       </div>
       <nav className="flex gap-5 text-white">
         <Link href="/">Home</Link>
-        <Link href="/chatbot">Chatbot</Link>
+        <Link href="/chat">Chatbot</Link>
         <Link href="/articles">Articles</Link>
       </nav>
     </header>
