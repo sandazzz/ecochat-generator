@@ -8,7 +8,9 @@ export default function Tilt(props: any) {
   const tilt = useRef(null);
 
   useEffect(() => {
-    VanillaTilt.init(tilt.current, options);
+    if (tilt.current) {
+      VanillaTilt.init(tilt.current, options);
+    }
   }, [options]);
 
   return <div ref={tilt} {...rest} />;
