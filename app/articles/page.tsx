@@ -5,14 +5,12 @@ export default async function Articles() {
   const articles = await getArticles();
 
   return (
-    <>
-      <main className="h-full relative">
-        <div className="relative top-36 mx-auto max-w-6xl flex flex-col gap-5">
-          {articles.map((article: any) => (
-            <Article key={article.id} article={article}></Article>
-          ))}
-        </div>
-      </main>
-    </>
+    <main className="min-h-screen w-full">
+      <div className="relative top-28 flex flex-col gap-5 items-center">
+        {articles.map((article: any) => (
+          <Article key={article.id} article={article}></Article>
+        ))}
+      </div>
+    </main>
   );
 }
