@@ -2,7 +2,7 @@ import Link from "next/link";
 import Tilt from "./vanilla-tilt";
 import { Layers, Bot } from "lucide-react";
 
-export function AnimatedCardLeft() {
+export async function AnimatedCardLeft() {
   const options = {
     max: 35,
     startX: -20, // the starting tilt on the Y axis, in degrees.
@@ -27,7 +27,7 @@ export function AnimatedCardLeft() {
   );
 }
 
-export function AnimatedCardRight() {
+export async function AnimatedCardRight() {
   const option = {
     max: 35,
     startX: 20, // the starting tilt on the Y axis, in degrees.
