@@ -15,7 +15,6 @@ Criteria :
 -Anwser in english if the question is in english
 -Anwser in french if the question is in french
 -if it is not a question about ecology respond that you can't anwser
-
 `*/
 
 // Set the runtime to edge for best performance
@@ -26,7 +25,7 @@ export async function POST(req: Request) {
 
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+    model: "gpt-4-1106-preview",
     stream: true,
     messages,
   });
