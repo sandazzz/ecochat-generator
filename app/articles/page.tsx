@@ -1,5 +1,5 @@
 import { getArticles } from "@/src/query/articles.query";
-import Article from "@/app/ui/article/article";
+import Article from "@/components/article/article";
 
 export default async function Articles() {
   const articles = await getArticles();

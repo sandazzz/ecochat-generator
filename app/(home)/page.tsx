@@ -1,5 +1,5 @@
-import ParticlesBackground from "@/app/ui/particlesBackground";
-import { AnimatedCardLeft, AnimatedCardRight } from "../ui/AnimatedCard";
+import ParticlesBackground from "@/components/particlesBackground";
+import { AnimatedCardLeft, AnimatedCardRight } from "@/components/AnimatedCard";
 
 export default async function Home() {
   return (

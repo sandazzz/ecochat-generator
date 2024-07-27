@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Tilt from "./vanilla-tilt";
+import Tilt from "@/components/vanilla-tilt";
 import { Layers, Bot } from "lucide-react";
 
 export async function AnimatedCardLeft() {
