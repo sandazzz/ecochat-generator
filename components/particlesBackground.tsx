@@ -1,4 +1,4 @@
-import styles from "@/app/ui/particles.module.css";
+import styles from "@/components/particles.module.css";
 import clsx from "clsx";
 
 export default async function ParticlesBackground() {
