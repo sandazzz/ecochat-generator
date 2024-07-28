@@ -3,32 +3,36 @@ import Link from "next/link";
 
 export default async function Article({ article }: any) {
   return (
-    <>
-      <Link className="relative" href={`/articles/${article.id}`} passHref>
-        <div
-          className="w-full h-72 p-2 
-                flex flex-col md:flex-row items-center gap-4 relative 
-                border-solid border-2 border-[#4fc3dc] rounded-lg hover:border-[#ff2d75]"
-        >
-          <div className="flex items-center relative w-80 md:w-96 h-64">
-            <Image
-              className="rounded"
-              fill
-              style={{
-                objectFit: "cover",
-              }}
-              sizes="100vw "
-              priority={true}
-              src={article.illustration}
-              alt={article.title}
-            />
+    <Link
+      className="w-full max-w-4xl transform transition-transform hover:scale-105"
+      href={`/articles/${article.id}`}
+      passHref
+    >
+      <div className="relative w-full h-80 bg-gradient-to-r from-[#0c192c] to-[#273a4d] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+        <div className="absolute inset-0">
+          <Image
+            className="object-cover object-center w-full h-full opacity-80"
+            fill
+            src={article.illustration}
+            alt={article.title}
+          />
+        </div>
+        <div className="relative p-6 h-full flex flex-col justify-between bg-gradient-to-t from-black/70 via-black/50 to-transparent">
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-2 drop-shadow-md">
+              {article.title}
+            </h2>
+            <p className="text-base text-white line-clamp-3 drop-shadow-sm">
+              {article.description}
+            </p>
           </div>
-          <div className="text-white w-80 md:w-96 md:h-64">
-            <h2>{article.title}</h2>
-            <p>{article.description}</p>
+          <div className="flex justify-end">
+            <span className="text-base font-semibold text-[#4fc3dc] hover:underline">
+              Read more
+            </span>
           </div>
         </div>
-      </Link>
-    </>
+      </div>
+    </Link>
   );
 }
