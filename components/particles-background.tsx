@@ -6,7 +6,7 @@ export default function ParticlesBackground() {
   ];
   return (
     <div className="absolute w-full h-screen overflow-hidden">
-      <div className="relative w-full h-full flex flex-wrap justify-center items-center">
+      <div className="relative w-full flex ">
         {iValues.map((i, index) => (
           <span
             key={index}

@@ -14,7 +14,7 @@ export function AnimatedCardLeft() {
   return (
     <Tilt
       options={options}
-      className="flex flex-col items-center w-72 h-72 md:h-80 lg:h-96 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d] bg-opacity-90 border-t-2 border-l-2 border-solid border-white border-opacity-50 rounded-2xl shadow-lg transform transition-transform hover:scale-105"
+      className="flex flex-col items-center w-72 h-72 md:h-80 lg:h-96 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d] bg-opacity-90  border-2 border-solid border-white border-opacity-50 rounded-2xl shadow-lg"
     >
       <Link
         className="flex flex-col items-center justify-center h-full"
@@ -37,7 +37,7 @@ export function AnimatedCardRight() {
   return (
     <Tilt
       options={options}
-      className="flex flex-col items-center w-72 h-72 md:h-80 lg:h-96 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d] bg-opacity-90 border-t-2 border-r-2 border-solid border-white border-opacity-50 rounded-2xl shadow-lg transform transition-transform hover:scale-105"
+      className="flex flex-col items-center w-72 h-72 md:h-80 lg:h-96 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d] bg-opacity-90 border-2 border-solid border-white border-opacity-50 rounded-2xl shadow-lg"
     >
       <Link
         className="flex flex-col items-center justify-center h-full"

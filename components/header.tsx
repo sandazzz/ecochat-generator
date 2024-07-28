@@ -2,9 +2,13 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 glass w-full h-16 px-6 md:px-52 flex items-center">
+    <header className="sticky top-0 z-50 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d]/70 backdrop-blur-md border-b border-slate-300/10 w-full h-16 px-6 md:px-52 flex items-center justify-between">
       <div className="dropdown block md:hidden">
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn btn-ghost btn-circle text-white"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -22,20 +26,26 @@ export default function Header() {
         </div>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-slate-800 rounded-md w-52"
         >
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" className="text-white">
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/chat">Chatbot</Link>
+            <Link href="/chat" className="text-white">
+              Chatbot
+            </Link>
           </li>
           <li>
-            <Link href="/articles">Articles</Link>
+            <Link href="/articles" className="text-white">
+              Articles
+            </Link>
           </li>
         </ul>
       </div>
-      <nav className="flex gap-5 text-white">
+      <nav className="hidden md:flex gap-5 text-white">
         <Link href="/">Home</Link>
         <Link href="/chat">Chatbot</Link>
         <Link href="/articles">Articles</Link>
