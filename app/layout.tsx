@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full bg-[#0c192c]">
-      <body className={clsx(inter.className, "h-full")}>
-        <Header />
+    <html lang="en">
+      <body className={clsx(inter.className, "min-h-screen bg-gradient-to-br from bg-base-dark via bg-gradient-mid to bg-gradient-lights")}>
+        {<Header />}
         {children}
       </body>
     </html>

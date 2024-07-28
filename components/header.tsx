@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="glass absolute top-0 z-10 w-full h-16 px-6 md:px-52 flex items-center">
+    <header className="sticky top-0 z-50 glass w-full h-16 px-6 md:px-52 flex items-center">
       <div className="dropdown block md:hidden">
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
           <svg

@@ -1,10 +1,18 @@
+.bubbles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .bubbles span {
   position: relative;
-  min-width: 30px;
-  height: 30px;
+  min-width: 20px; /* Reduced size for better mobile view */
+  height: 20px; /* Reduced size for better mobile view */
   background: #4fc3dc;
   border-radius: 50%;
-  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  box-shadow: 0 0 0 5px #4fc3dc44, 0 0 25px #4fc3dc, 0 0 50px #4fc3dc;
   margin: 0 4px;
   animation: animate 15s linear infinite;
   animation-duration: calc(75s / var(--i));
@@ -12,7 +20,7 @@
 
 .bubbles span:nth-child(even) {
   background: #ff2d75;
-  box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+  box-shadow: 0 0 0 5px #ff2d7544, 0 0 25px #ff2d75, 0 0 50px #ff2d75;
 }
 
 @keyframes animate {
