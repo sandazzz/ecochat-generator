@@ -18,7 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, "min-h-screen w-full bg-gradient-to-br from bg-base-dark via bg-gradient-mid to bg-gradient-light")}>
+      <body
+        className={clsx(
+          inter.className,
+          "from via to min-h-screen w-full bg-base-dark bg-gradient-light bg-gradient-mid bg-gradient-to-br",
+        )}
+      >
         {<Header />}
         {children}
       </body>

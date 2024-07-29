@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d]/70 backdrop-blur-md border-b border-slate-300/10 w-full h-16 px-6 md:px-52 flex items-center justify-between">
+    <header className="sticky top-0 z-50 flex h-16 w-full items-center justify-between border-b border-slate-300/10 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d]/70 px-6 backdrop-blur-md md:px-52">
       <div className="dropdown block md:hidden">
         <div
           tabIndex={0}
           role="button"
-          className="btn btn-ghost btn-circle text-white"
+          className="btn btn-circle btn-ghost text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ export default function Header() {
         </div>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-slate-800 rounded-md w-52"
+          className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-md bg-slate-800 p-2 shadow-lg"
         >
           <li>
             <Link href="/" className="text-white">
@@ -45,7 +45,7 @@ export default function Header() {
           </li>
         </ul>
       </div>
-      <nav className="hidden md:flex gap-5 text-white">
+      <nav className="hidden gap-5 text-white md:flex">
         <Link href="/">Home</Link>
         <Link href="/chat">Chatbot</Link>
         <Link href="/articles">Articles</Link>

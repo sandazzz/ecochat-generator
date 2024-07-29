@@ -9,15 +9,14 @@ export function AnimatedCardLeft() {
     startX: -10,
     speed: 200,
     glare: true,
-   
   };
   return (
     <Tilt
       options={options}
-      className="flex flex-col items-center w-72 h-72 md:h-80 lg:h-96 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d] bg-opacity-90  border-2 border-solid border-white border-opacity-50 rounded-2xl shadow-lg"
+      className="flex h-72 w-72 flex-col items-center rounded-2xl border-2 border-solid border-white border-opacity-50 bg-opacity-90 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d] shadow-lg md:h-80 lg:h-96"
     >
       <Link
-        className="flex flex-col items-center justify-center h-full"
+        className="flex h-full flex-col items-center justify-center"
         href="/chat"
       >
         <Bot size={80} className="text-white" />
@@ -37,10 +36,10 @@ export function AnimatedCardRight() {
   return (
     <Tilt
       options={options}
-      className="flex flex-col items-center w-72 h-72 md:h-80 lg:h-96 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d] bg-opacity-90 border-2 border-solid border-white border-opacity-50 rounded-2xl shadow-lg"
+      className="flex h-72 w-72 flex-col items-center rounded-2xl border-2 border-solid border-white border-opacity-50 bg-opacity-90 bg-gradient-to-br from-[#0c192c] via-[#1a273a] to-[#273a4d] shadow-lg md:h-80 lg:h-96"
     >
       <Link
-        className="flex flex-col items-center justify-center h-full"
+        className="flex h-full flex-col items-center justify-center"
         href="/articles"
       >
         <Layers size={80} className="text-white" />

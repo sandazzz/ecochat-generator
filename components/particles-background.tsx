@@ -5,12 +5,12 @@ export default function ParticlesBackground() {
     13, 15, 26, 17, 13, 28, 11, 12, 24, 10,
   ];
   return (
-    <div className="absolute w-full h-screen overflow-hidden">
-      <div className="relative w-full flex ">
+    <div className="absolute h-screen w-full overflow-hidden">
+      <div className="relative flex w-full">
         {iValues.map((i, index) => (
           <span
             key={index}
-            className={`absolute rounded-full animate-float ${
+            className={`absolute animate-float rounded-full ${
               index % 2 === 0
                 ? "bg-pink-500 shadow-lg-pink"
                 : "bg-blue-300 shadow-lg-blue"
